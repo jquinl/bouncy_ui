@@ -1,0 +1,435 @@
+[gd_scene load_steps=12 format=3 uid="uid://cxsmohn6hhdts"]
+
+[ext_resource type="Script" path="res://punchy_container.gd" id="1_qceds"]
+[ext_resource type="Script" path="res://button_multi.gd" id="2_7eaq3"]
+
+[sub_resource type="Curve" id="Curve_pdlnf"]
+min_value = 0.5
+max_value = 1.1
+_data = [Vector2(0, 0.627273), 0.0, 0.0, 0, 0, Vector2(0.511864, 0.909091), 0.0, 0.0, 0, 0, Vector2(0.755932, 0.8), 0.0, 0.0, 0, 0, Vector2(1, 1.1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_q5dyk"]
+_data = [Vector2(0.0101695, 0.590909), 0.0, 0.0, 0, 0, Vector2(0.491525, 0.918182), 0.0, 0.0, 0, 0, Vector2(0.742373, 0.7), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_k3esh"]
+_data = [Vector2(0.0101695, 0.490909), 0.0, 0.0, 0, 0, Vector2(0.491525, 0.790909), 0.0, 0.0, 0, 0, Vector2(0.738983, 0.572727), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_1a3wq"]
+min_value = 0.5
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(0.501305, 0.918182), 0.0, 0.0, 0, 0, Vector2(0.746736, 0.727273), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_77o65"]
+min_value = 0.5
+_data = [Vector2(0, 0.5), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0qgyu"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.497076, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_o5j4d"]
+min_value = 0.5
+_data = [Vector2(0, 0.681818), 0.0, 0.0, 0, 0, Vector2(0.160819, 0.590909), 0.0, 0.0, 0, 0, Vector2(0.508772, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.663636), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_ph3p4"]
+_data = [Vector2(0, 0.581818), 0.0, 0.0, 0, 0, Vector2(0.494152, 0.818182), 0.0, 0.0, 0, 0, Vector2(0.818713, 0.609091), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_5nk07"]
+max_value = 1.1
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.245614, 1.1), 0.0, 0.0, 0, 0, Vector2(0.497076, 0.7), 0.0, 0.0, 0, 0, Vector2(0.760234, 0.79), 0.0, 0.0, 0, 0, Vector2(1, 0.53), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[node name="CanvasRect" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.819608, 0.811765, 0.886275, 0.541176)
+metadata/_edit_vertical_guides_ = []
+
+[node name="StretchyCurveContainer" type="StretchyContainer" parent="."]
+enabled = true
+stretch_origin = 2112357166
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 0
+offset_left = 371.0
+offset_top = 9.0
+offset_right = 754.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="StretchyCurveContainer"]
+layout_mode = 2
+offset_left = 71.0
+offset_right = 311.246
+offset_bottom = 60.0
+mouse_filter = 1
+text = "Stretchy (Centre)"
+
+[node name="StretchyCurveContainer2" type="StretchyContainer" parent="."]
+enabled = true
+duration = 0.4
+stretch_origin = 3
+stretch_curve_x = SubResource("Curve_q5dyk")
+stretch_curve_y = SubResource("Curve_k3esh")
+layout_mode = 1
+offset_left = 14.0
+offset_top = 21.0
+offset_right = 192.0
+offset_bottom = 151.0
+
+[node name="Button" type="Button" parent="StretchyCurveContainer2"]
+layout_mode = 2
+offset_left = 36.0
+offset_right = 141.182
+offset_bottom = 63.8182
+mouse_filter = 1
+text = "Stretchy
+(Top)"
+
+[node name="PunchyContainer" type="PunchyContainer" parent="."]
+unpunch_duration = 0.1
+punch_origin = 2975591649
+punch_curve_x = SubResource("Curve_1a3wq")
+unpunch_curve_x = SubResource("Curve_77o65")
+layout_mode = 2
+offset_left = 12.0
+offset_top = 550.0
+offset_right = 365.0
+offset_bottom = 636.0
+script = ExtResource("1_qceds")
+
+[node name="Button" type="Button" parent="PunchyContainer"]
+layout_mode = 2
+offset_left = 88.0
+offset_right = 264.5
+offset_bottom = 86.0
+mouse_filter = 1
+text = "Punchy
+(Script)"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 569.0
+offset_right = 1147.0
+offset_bottom = 648.0
+alignment = 1
+
+[node name="JumpyContainer" type="JumpyContainer" parent="HBoxContainer"]
+resting_size = 1.0
+position_curve_y = SubResource("Curve_0qgyu")
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 39.0
+offset_right = 52.0
+offset_bottom = 79.0
+
+[node name="Button" type="Button" parent="HBoxContainer/JumpyContainer"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 13.0
+offset_bottom = 65.8636
+mouse_filter = 1
+text = "J"
+
+[node name="JumpyContainer2" type="JumpyContainer" parent="HBoxContainer"]
+resting_size = 1.0
+position_curve_y = SubResource("Curve_0qgyu")
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 56.0
+offset_right = 76.0
+offset_bottom = 79.0
+
+[node name="Button" type="Button" parent="HBoxContainer/JumpyContainer2"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 20.0
+offset_bottom = 65.8636
+mouse_filter = 1
+text = "U"
+
+[node name="JumpyContainer3" type="JumpyContainer" parent="HBoxContainer"]
+resting_size = 1.0
+position_curve_y = SubResource("Curve_0qgyu")
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 80.0
+offset_right = 103.0
+offset_bottom = 79.0
+
+[node name="Button" type="Button" parent="HBoxContainer/JumpyContainer3"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 23.0
+offset_bottom = 65.8636
+mouse_filter = 1
+text = "M"
+
+[node name="JumpyContainer4" type="JumpyContainer" parent="HBoxContainer"]
+resting_size = 1.0
+position_curve_y = SubResource("Curve_0qgyu")
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 107.0
+offset_right = 125.0
+offset_bottom = 79.0
+
+[node name="Button" type="Button" parent="HBoxContainer/JumpyContainer4"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 18.0
+offset_bottom = 65.8636
+mouse_filter = 1
+text = "P"
+
+[node name="JumpyContainer5" type="JumpyContainer" parent="HBoxContainer"]
+resting_size = 1.0
+position_curve_y = SubResource("Curve_0qgyu")
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 129.0
+offset_right = 147.0
+offset_bottom = 79.0
+
+[node name="Button" type="Button" parent="HBoxContainer/JumpyContainer5"]
+layout_mode = 2
+offset_top = 12.0
+offset_right = 18.0
+offset_bottom = 65.8636
+mouse_filter = 1
+text = "Y"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 82.0
+offset_right = 1153.0
+offset_bottom = 192.0
+
+[node name="StretchyCurveContainer3" type="StretchyContainer" parent="VBoxContainer"]
+enabled = true
+stretch_origin = 2
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_right = 213.0
+offset_bottom = 31.0
+
+[node name="Button" type="Button" parent="VBoxContainer/StretchyCurveContainer3"]
+layout_mode = 2
+offset_left = 79.0
+offset_right = 212.609
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Right)"
+
+[node name="StretchyCurveContainer4" type="StretchyContainer" parent="VBoxContainer"]
+enabled = true
+stretch_origin = 2
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_top = 35.0
+offset_right = 213.0
+offset_bottom = 66.0
+
+[node name="Button" type="Button" parent="VBoxContainer/StretchyCurveContainer4"]
+layout_mode = 2
+offset_left = 79.0
+offset_right = 212.609
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Right)"
+
+[node name="StretchyCurveContainer5" type="StretchyContainer" parent="VBoxContainer"]
+enabled = true
+stretch_origin = 2
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_top = 70.0
+offset_right = 213.0
+offset_bottom = 101.0
+
+[node name="Button" type="Button" parent="VBoxContainer/StretchyCurveContainer5"]
+layout_mode = 2
+offset_left = 79.0
+offset_right = 212.609
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Right)"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_mode = 1
+offset_top = 187.0
+offset_right = 198.0
+offset_bottom = 340.0
+
+[node name="StretchyCurveContainer3" type="StretchyContainer" parent="VBoxContainer2"]
+enabled = true
+stretch_origin = 1
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_right = 198.0
+offset_bottom = 31.0
+
+[node name="Button" type="Button" parent="VBoxContainer2/StretchyCurveContainer3"]
+layout_mode = 2
+offset_right = 124.2
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Left)"
+
+[node name="StretchyCurveContainer4" type="StretchyContainer" parent="VBoxContainer2"]
+enabled = true
+stretch_origin = 1
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_top = 35.0
+offset_right = 198.0
+offset_bottom = 66.0
+
+[node name="Button" type="Button" parent="VBoxContainer2/StretchyCurveContainer4"]
+layout_mode = 2
+offset_right = 124.2
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Left)"
+
+[node name="StretchyCurveContainer5" type="StretchyContainer" parent="VBoxContainer2"]
+enabled = true
+stretch_origin = 1
+stretch_curve_x = SubResource("Curve_pdlnf")
+layout_mode = 2
+offset_top = 70.0
+offset_right = 198.0
+offset_bottom = 101.0
+
+[node name="Button" type="Button" parent="VBoxContainer2/StretchyCurveContainer5"]
+layout_mode = 2
+offset_right = 124.2
+offset_bottom = 31.0
+mouse_filter = 1
+text = "Stretchy (Left)"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="."]
+layout_mode = 1
+offset_left = 532.0
+offset_top = 511.0
+offset_right = 838.0
+offset_bottom = 580.0
+alignment = 1
+
+[node name="JumpyContainer" type="JumpyContainer" parent="HBoxContainer2"]
+resting_size = 1.0
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 99.0
+offset_right = 112.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="HBoxContainer2/JumpyContainer"]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 13.0
+offset_bottom = 57.0454
+mouse_filter = 1
+text = "J"
+
+[node name="JumpyContainer2" type="JumpyContainer" parent="HBoxContainer2"]
+resting_size = 1.0
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 116.0
+offset_right = 136.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="HBoxContainer2/JumpyContainer2"]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 20.0
+offset_bottom = 57.0454
+mouse_filter = 1
+text = "U"
+
+[node name="JumpyContainer3" type="JumpyContainer" parent="HBoxContainer2"]
+resting_size = 1.0
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 140.0
+offset_right = 163.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="HBoxContainer2/JumpyContainer3"]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 23.0
+offset_bottom = 57.0454
+mouse_filter = 1
+text = "M"
+
+[node name="JumpyContainer4" type="JumpyContainer" parent="HBoxContainer2"]
+resting_size = 1.0
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 167.0
+offset_right = 185.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="HBoxContainer2/JumpyContainer4"]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 57.0454
+mouse_filter = 1
+text = "P"
+
+[node name="JumpyContainer5" type="JumpyContainer" parent="HBoxContainer2"]
+resting_size = 1.0
+scale_curve_y = SubResource("Curve_o5j4d")
+layout_mode = 2
+offset_left = 189.0
+offset_right = 207.0
+offset_bottom = 69.0
+
+[node name="Button" type="Button" parent="HBoxContainer2/JumpyContainer5"]
+layout_mode = 2
+offset_top = 10.0
+offset_right = 18.0
+offset_bottom = 57.0454
+mouse_filter = 1
+text = "Y"
+
+[node name="StretchyContainer" type="StretchyContainer" parent="."]
+enabled = true
+stretch_curve_x = SubResource("Curve_ph3p4")
+layout_mode = 0
+offset_left = 379.0
+offset_top = 226.0
+offset_right = 699.0
+offset_bottom = 370.0
+
+[node name="PunchyContainer" type="PunchyContainer" parent="StretchyContainer"]
+punch_curve_x = SubResource("Curve_5nk07")
+unpunch_curve_x = SubResource("Curve_5nk07")
+layout_mode = 2
+offset_left = 66.0
+offset_right = 252.182
+offset_bottom = 144.0
+
+[node name="Button" type="Button" parent="StretchyContainer/PunchyContainer"]
+layout_mode = 2
+offset_right = 186.182
+offset_bottom = 144.0
+mouse_filter = 1
+text = "Nested 
+Stretchy 
+and 
+Punchy"
+clip_text = true
+script = ExtResource("2_7eaq3")
