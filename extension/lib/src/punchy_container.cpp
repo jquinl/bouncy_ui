@@ -4,9 +4,6 @@ PunchyContainer::PunchyContainer()
 {
     set_mouse_filter(MOUSE_FILTER_PASS);
     reset_function();
-    resize_x = false;
-    resize_y = false;
-    mouse_entered = false;
 }
 PunchyContainer::~PunchyContainer()
 {
@@ -88,6 +85,13 @@ Vector2 PunchyContainer::_get_minimum_size() const
 }
 void PunchyContainer::_notification(int p_what) {
     switch (p_what) {
+        case NOTIFICATION_POSTINITIALIZE:
+        {
+            still_inside = false;
+            resize_x = false;
+            resize_y = false;
+            mouse_entered = false;
+        }break;
         case NOTIFICATION_READY:
         {
             still_inside = false;

@@ -2,8 +2,17 @@
 import os
 import sys
 
-env = SConscript("../godot-cpp/SConstruct")
+def get_doc_path():
+    return "doc/classes"
 
+def get_doc_classes():
+    return [
+        "StretchyContainer",
+        "PunchyContainer",
+        "JumpyContainer",
+    ]
+
+env = SConscript("../godot-cpp/SConstruct")
 # For the reference:
 # - CCFLAGS are compilation flags shared between C and C++
 # - CFLAGS are for C-specific compilation flags
@@ -15,6 +24,12 @@ env = SConscript("../godot-cpp/SConstruct")
 # tweak this if you want to use different folders, or more folders, to store your source code in.
 env.Append(CPPPATH=["src/"])
 
+import config
+
+env.doc_class_path = {}
+for cls in config.get_doc_classes():
+    env.doc_class_path[cls] = config.get_doc_path() + "/" + cls
+
 if env["target"] in ["editor", "template_debug"]:
     env.AppendUnique(CPPDEFINES=["DEBUG_ENABLED", "DEBUG_METHODS_ENABLED"])
 sources = Glob("src/*.cpp")
@@ -25,5 +40,7 @@ library = env.SharedLibrary(
     ),
     source=sources,
 )
+
+
 
 Default(library)

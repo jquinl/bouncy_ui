@@ -415,6 +415,7 @@ offset_right = 699.0
 offset_bottom = 370.0
 
 [node name="PunchyContainer" type="PunchyContainer" parent="StretchyContainer"]
+punch_origin = 1
 punch_curve_x = SubResource("Curve_5nk07")
 unpunch_curve_x = SubResource("Curve_5nk07")
 layout_mode = 2

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="Stretchy" inherits="Container" version="4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+	<brief_description>
+		test test
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="resize_child_by">
+			<return type="void" />
+			<description>
+				test test
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="duration" type="float" setter="set_duration" getter="get_duration" default="0.2">
+			<description>
+				test test
+			</description>
+		</member>
+		<member name="enabled" type="bool" setter="set_enabled" getter="get_enabled" default="true">
+			<description>
+				test test
+			</description>
+		</member>
+		<member name="stretch_curve_x" type="Object" setter="set_stretch_curve_x" getter="get_stretch_curve_x">
+			<description>
+				test test
+			</description>
+		</member>
+		<member name="stretch_curve_y" type="Object" setter="set_stretch_curve_y" getter="get_stretch_curve_y">
+			<description>
+				test test
+			</description>
+		</member>
+		<member name="stretch_origin" type="ENUM" setter="set_stretch_origin" getter="get_stretch_origin" default="CENTRE">
+			<description>
+				test test
+			</description>
+		</member>
+	</members>
+</class>
