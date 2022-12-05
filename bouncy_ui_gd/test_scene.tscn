@@ -307,7 +307,6 @@ text = "Y"
 
 [node name="StretchyContainer" type="StretchyContainer" parent="."]
 enabled = true
-stretch_origin = 0
 stretch_curve_x = SubResource("Curve_ph3p4")
 layout_mode = 0
 offset_left = 379.0
