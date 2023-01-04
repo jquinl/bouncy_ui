@@ -1,5 +1,5 @@
 # BouncyUI
-UI control node extension for the Godot Game Engine using GDextension (Godot 4 beta 8, will update until release)  
+UI control node extension for the Godot Game Engine using GDextension (Godot 4 beta 10, will update until release, currently broken due to bug)  
 (under construction and subject to change, use only in DEBUG mode)..
 
 This is a UI node extension that I'm using in a personal project. It adds 3 control nodes that facilitate making a responsive UI.
